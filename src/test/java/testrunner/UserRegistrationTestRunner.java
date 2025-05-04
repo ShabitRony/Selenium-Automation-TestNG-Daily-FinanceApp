@@ -27,7 +27,7 @@ public class UserRegistrationTestRunner extends Setup {
       Faker faker = new Faker();
       String firstName = faker.name().firstName();
       String lastName = faker.name().lastName();
-      String email = ("shabitalahi123+24@gmail.com");
+      String email = ("shabitalahi123+26@gmail.com");
       String password ="1234";
       String phoneNumber = "0160"+ Utils.generateNumber(1000000,9999999);
       String address = faker.address().fullAddress();

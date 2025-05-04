@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import page.LoginPage;
@@ -32,7 +33,7 @@ public class UserProfileTestRunner extends Setup {
     public void setAuth() throws IOException, ParseException, InterruptedException {
          AuthUtils.setAuth(driver);
     }
-    @Test(priority = 1,description = "User edit by admin")
+    @Test(priority = 1,description = "User Info Edit by Admin")
     public void editUserInfo() throws InterruptedException, IOException, ParseException {
         LoginPage loginPage = new LoginPage(driver);
         Thread.sleep(5000);
@@ -57,12 +58,13 @@ public class UserProfileTestRunner extends Setup {
         Utils.saveUserData("./src/test/resources/users.json",userObj);
 
     }
-    @Test(priority = 3, description = "Admin Logout")
+//    @Test(priority = 3, description = "Admin Logout")
     public void logout() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         Thread.sleep(2000);
         loginPage.doLogout();
 //        driver.quit();
     }
+
 }
 

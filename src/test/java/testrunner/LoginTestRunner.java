@@ -27,7 +27,7 @@ import static config.Setup.driver;
 public class LoginTestRunner extends Setup {
 
 
-//  @Test(description = "Admin Login")
+  @Test(priority = 1, description = "Admin Login")
     public void adminLogin() throws IOException {
     LoginPage loginPage = new LoginPage(driver);
     if(System.getProperty("email")!=null && System.getProperty("password")!=null){
@@ -37,7 +37,7 @@ public class LoginTestRunner extends Setup {
     }
     AuthUtils.getToken();
 }
-//    @Test(priority = 3, description = "Admin Logout")
+    @Test(priority = 2, description = "Admin Logout")
     public void logout() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         Thread.sleep(2000);
@@ -45,7 +45,7 @@ public class LoginTestRunner extends Setup {
 //        driver.quit();
     }
 
-    @Test(priority =1, description = "User Login with NewPassword")
+    @Test(priority =3, description = "User Login with NewPassword")
     public void userLogin() throws IOException, ParseException, InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         JSONParser parser = new JSONParser();
@@ -61,14 +61,14 @@ public class LoginTestRunner extends Setup {
 //        btnCost.get(1).click();
 
     }
-    @Test(priority = 2, description = "User Logout")
+    @Test(priority = 4, description = "User Logout")
     public void userLogout() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         Thread.sleep(3000);
         loginPage.doLogout();
 //        driver.quit();
     }
-    @Test(priority = 3, description = "User Login With OldEmail")
+    @Test(priority = 5, description = "User Login With OldEmail")
     public void userLoginWithOldEmail(){
        LoginPage login = new LoginPage(driver);
        login.userLogin("shabitalahi123+24@gmail.com","12345");

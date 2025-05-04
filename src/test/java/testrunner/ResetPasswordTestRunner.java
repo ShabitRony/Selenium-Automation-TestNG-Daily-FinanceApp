@@ -32,7 +32,7 @@ public class ResetPasswordTestRunner extends Setup
 //        userModel.setEmail(email);
 //
 //        resetPassword.resetPassword(userModel);
-        resetPassword.resetPassword("shabitalahi123+113@gmail.com");
+        resetPassword.resetPassword("shabitalahi123+222@gmail.com");
         String actualMessage =driver.findElement(By.tagName("p")).getText();
         System.out.println(actualMessage);
         String expectedMessgae = "Your email is not registered";
@@ -40,14 +40,17 @@ public class ResetPasswordTestRunner extends Setup
     }
         @Test(priority = 2, description = "Reset with Empty Field")
     public void resetWithEmptyField(){
-        driver.findElement(By.partialLinkText("Reset it here")).click();
+            driver.navigate().to("https://dailyfinance.roadtocareer.net/forgot-password");
+//        driver.findElement(By.partialLinkText("Reset it here")).click();
         String isRequired =driver.findElement(By.tagName("input")).getAttribute("required");
         driver.findElement(By.tagName("button")).click();
         Assert.assertNotNull(isRequired, "Email field should have 'required' attribute.");
+//        driver.close();
     }
     @Test(priority = 3, description = "User Login With Valid Email")
     public void resetPasswordWithValidEmail() throws IOException, ParseException, InterruptedException {
-        driver.findElement(By.partialLinkText("Reset it here")).click();
+        driver.navigate().to("https://dailyfinance.roadtocareer.net/forgot-password");
+//        driver.findElement(By.partialLinkText("Reset it here")).click();
         ResetPassword reset = new ResetPassword(driver);
         JSONParser parser = new JSONParser();
         JSONArray jsonArray =(JSONArray) parser.parse(new FileReader("./src/test/resources/users.json"));
