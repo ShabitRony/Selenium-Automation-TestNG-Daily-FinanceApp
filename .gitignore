@@ -42,3 +42,5 @@ bin/
 .DS_Store
 .idea
 build.gradle
+allure-results
+allure-report
