@@ -1,0 +1,1 @@
+{"uuid":"f0e5bc2c-50df-4331-a9b6-49bb7b587491","name":"Data Scrap","children":["be0c99a2-528f-4c11-8c56-eb706357276a"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1746392369452,"stop":1746392370989}],"afters":[],"start":1746392369450,"stop":1746392373299}

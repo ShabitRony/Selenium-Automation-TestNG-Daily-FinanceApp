@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <suite name ="Daily Finance">
-    <test name = "Admin user Login">
+    <test name = "User Registration">
         <classes>
-            <class name = "testrunner.LoginTestRunner"></class>
+            <class name="testrunner.UserRegistrationTestRunner"></class>
         </classes>
     </test>
     <test name = "Reset user Password">
@@ -10,29 +10,45 @@
             <class name ="testrunner.ResetPasswordTestRunner"></class>
         </classes>
     </test>
-    <test name ="Admin Search User">
-        <classes>
-            <class name="testrunner.SearchUserTestRunner"></class>
-        </classes>
-    </test>
     <test name  = "Add Item Cost">
         <classes>
             <class name = "testrunner.UserCostTestRunner"></class>
         </classes>
     </test>
-    <test name = "User Registration">
+    <test name  = "Add Item Cost Without All Field">
         <classes>
-            <class name="testrunner.UserRegistrationTestRunner"></class>
+            <class name = "testrunner.CostWithoutMandatoryFieldTestRunner"></class>
         </classes>
     </test>
+
     <test name ="User Profile Login">
         <classes>
             <class name="testrunner.UserProfileTestRunner"></class>
         </classes>
     </test>
+    <test name = "User Login With New and Old Email">
+        <classes>
+            <class name = "testrunner.UserLoginWithNewAndOldEmailTestRunner"></class>
+        </classes>
+    </test>
+    <test name = "Admin Login">
+        <classes>
+            <class name = "testrunner.LoginTestRunner"></class>
+        </classes>
+    </test>
+    <test name ="Admin Search User">
+        <classes>
+            <class name="testrunner.SearchUserTestRunner"></class>
+        </classes>
+    </test>
     <test name ="Login From CSV File">
         <classes>
             <class name="testrunner.LoginTestRunnerCSV"></class>
+        </classes>
+    </test>
+    <test name ="Data Scrap">
+        <classes>
+            <class name="testrunner.UserDataScrapTestRunner"></class>
         </classes>
     </test>
 </suite>

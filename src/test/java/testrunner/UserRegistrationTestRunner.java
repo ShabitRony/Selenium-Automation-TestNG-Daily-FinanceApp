@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import page.UserRegistrationPage;
 import utils.EmailUtils;
@@ -27,7 +28,7 @@ public class UserRegistrationTestRunner extends Setup {
       Faker faker = new Faker();
       String firstName = faker.name().firstName();
       String lastName = faker.name().lastName();
-      String email = ("shabitalahi123+26@gmail.com");
+      String email = ("shabitalahi123+55@gmail.com");
       String password ="1234";
       String phoneNumber = "0160"+ Utils.generateNumber(1000000,9999999);
       String address = faker.address().fullAddress();
@@ -66,5 +67,9 @@ public class UserRegistrationTestRunner extends Setup {
 
         Assert.assertTrue("Confirmation email was received.", isMailReceived);
 
+  }
+  @AfterTest
+  public void tearDown(){
+        driver.quit();
   }
 }

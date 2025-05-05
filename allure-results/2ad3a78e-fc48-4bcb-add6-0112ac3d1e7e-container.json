@@ -1,0 +1,1 @@
+{"uuid":"2ad3a78e-fc48-4bcb-add6-0112ac3d1e7e","name":"User Registration","children":["f5787c5d-86b0-4abb-81e2-f6f11f1c93f1"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1746391086715,"stop":1746391088885}],"afters":[],"start":1746391086689,"stop":1746391102904}

@@ -1,12 +1,20 @@
 package page;
 
 import config.Setup;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
+
+import static config.Setup.driver;
 
 public class LoginPage {
     @FindBy(id = "email")
@@ -16,9 +24,9 @@ public class LoginPage {
     @FindBy(tagName = "button")
     WebElement btnLogin;
     @FindBy(css = "[type=button]")
-    List<WebElement> btnProfileIcon;
+    public List<WebElement> btnProfileIcon;
     @FindBy(css = "[role=menuitem]")
-    List<WebElement> menuItem;
+    public List<WebElement> menuItem;
     @FindBy(tagName = "button")
     public List<WebElement> button;
 
@@ -43,4 +51,5 @@ public class LoginPage {
         txtPassword.sendKeys(password);
         btnLogin.click();
     }
+
 }

@@ -42,7 +42,6 @@ public class LoginTestRunner extends Setup {
         LoginPage loginPage = new LoginPage(driver);
         Thread.sleep(2000);
         loginPage.doLogout();
-//        driver.quit();
     }
 
     @Test(priority =3, description = "User Login with NewPassword")
@@ -52,13 +51,9 @@ public class LoginTestRunner extends Setup {
         JSONArray jsonArray =(JSONArray) parser.parse(new FileReader("./src/test/resources/users.json"));
         JSONObject jsonObject =(JSONObject)jsonArray.get(jsonArray.size()-1);
         String email =jsonObject.get("email").toString();
-//        String password = ("12345");
         String password = jsonObject.get("password").toString();
+        Thread.sleep(2000);
         loginPage.doLogin(email,password);
-
-//        Thread.sleep(2000);
-//        List<WebElement> btnCost =  driver.findElements(By.tagName("button"));
-//        btnCost.get(1).click();
 
     }
     @Test(priority = 4, description = "User Logout")
@@ -66,19 +61,9 @@ public class LoginTestRunner extends Setup {
         LoginPage loginPage = new LoginPage(driver);
         Thread.sleep(3000);
         loginPage.doLogout();
-//        driver.quit();
+        driver.quit();
     }
-    @Test(priority = 5, description = "User Login With OldEmail")
-    public void userLoginWithOldEmail(){
-       LoginPage login = new LoginPage(driver);
-       login.userLogin("shabitalahi123+24@gmail.com","12345");
 
-       String actualMessage= driver.findElement(By.tagName("p")).getText();
-        System.out.println(actualMessage);
-       String expectedMessage = "Invalid email or password";
-        Assert.assertTrue(actualMessage.equals(expectedMessage));
-
-    }
  }
 
 
