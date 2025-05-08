@@ -14,7 +14,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class UserLoginWithNewAndOldEmailTestRunner extends Setup {
-    @Test(priority =1, description = "User Login with Email")
+    @Test(priority =1, description = "User Login with New Email")
     public void userLogin() throws IOException, ParseException, InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         JSONParser parser = new JSONParser();

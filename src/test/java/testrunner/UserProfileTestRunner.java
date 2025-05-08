@@ -51,7 +51,7 @@ public class UserProfileTestRunner extends Setup {
         loginPage.button.get(1).click();
         WebElement txtEmail = driver.findElement(By.name("email"));
         txtEmail.sendKeys(Keys.CONTROL+"a",Keys.BACK_SPACE);
-        txtEmail.sendKeys("shabitalahi123+56@gmail.com");
+        txtEmail.sendKeys("shabitalahi123+556@gmail.com");
         loginPage.button.get(2).click();
         Thread.sleep(2000);
 
