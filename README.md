@@ -1,4 +1,4 @@
-# 💰 Daily Finance Website - End-to-End Automation Suite
+# 💰 Daily Finance Website  End-to-End Automation Suite
 # Project Overview 
 - This project automates a comprehensive user journey and admin operations on the Daily Finance website using Selenium WebDriver, TestNG, and Java. The test suite validates critical workflows such as registration, email verification, password reset, item management, and admin dashboard validation.
 
@@ -94,7 +94,7 @@ https://github.com/user-attachments/assets/eee8bf8b-238f-40fe-bdae-9270c049849f
 
 # How to run?
 - Clone this repository from GitHub.
-- git clone https://github.com/ShabitRony/RestAssured-Assignment-B14.git
+- git clone https://github.com/ShabitRony/Selenium-Automation-TestNG-Daily-FinanceApp.git
 - Run the test( ./gradlew test)
 - Install necessary dependencies from mvnrepository.
 - After Automation generate Allure report.
